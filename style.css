@@ -11,31 +11,29 @@ button{
     
 }
 
-#calc-display{
+ #calc-display{
     display: flex;
     flex-wrap: wrap;
-    width: 29.3vh;
-    height: 47vh;
-    padding-top: 5px;
-    margin-top: 10%;
-    margin-left: 43%;
+    width: 220px;          
+    height: auto;          
+    padding: 10px;
+    margin: 100px auto;    
     background-color: grey;
     border-radius: 10px;
     border: 1px solid black;
-    padding-left: 3px;
-     
 }
-input{
-    width: 27vh;
+
+#display{
+    width: 100%;
     height: 60px;
-    border-radius: 10px; 
+    box-sizing: border-box;   
+    border-radius: 10px;
     border: 1px solid black;
     background-color: white;
     font-size: 35px;
-    text-align: right; 
-    padding-left: 5px;
+    text-align: right;
+    padding: 10px;
 }
-
 
 h1{
     justify-content: center;

@@ -13,9 +13,10 @@ buttons.forEach(function(button){
             
             let value= button.innerText;
             if (!isNaN(value)) {
-                if (isNewNumber) {
+                if (display.value==="0" || isNewNumber || justCalculated) {
                     display.value=value;
                     isNewNumber=false;
+                    justCalculated=false;
                 }else{
                     display.value+=value;
                 }
@@ -27,13 +28,13 @@ buttons.forEach(function(button){
                 firstNumber=display.value;
                 operator= value;
                 isNewNumber = true;
-                display.value="";  
+                display.value="0";  
             }
 
             //reset-logic
             
             else if(value==="C"){
-                display.value="";
+                display.value="0";
                 firstNumber="";
                 operator="";
                 isNewNumber=true;
@@ -43,7 +44,15 @@ buttons.forEach(function(button){
             //equals-logic
             
             else if (value==="=") {
-                secoundNumber=display.value;
+                if (firstNumber ==="" || operator ==="" || display.value ===""){
+                    firstNumber="";
+                    operator="";
+                    display.value="0";
+                    isNewNumber=true;
+                    justCalculated=false;
+                    return;
+                }
+                let secoundNumber=display.value;
                 let num1=Number(firstNumber);
                 let num2=Number(secoundNumber);
                 let result;

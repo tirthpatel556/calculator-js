@@ -47,7 +47,7 @@ buttons.forEach(function(button){
                 if (firstNumber ==="" || operator ==="" || display.value ===""){
                     firstNumber="";
                     operator="";
-                    display.value="0";
+                    display.value="";
                     isNewNumber=true;
                     justCalculated=false;
                     return;
